@@ -1,0 +1,38 @@
+{
+  "en": [
+    {
+      "title": "Github",
+      "url": "https://github.com/yourusername"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/yourusername"
+    },
+    {
+      "title": "Mastodon",
+      "url": "https://mastodon.social/@yourusername"
+    },
+    {
+      "title": "Email",
+      "url": "mailto:john.doe@example.com"
+    }
+  ],
+  "ua": [
+    {
+      "title": "Github",
+      "url": "https://github.com/yourusername"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/yourusername"
+    },
+    {
+      "title": "Mastodon",
+      "url": "https://mastodon.social/@yourusername"
+    },
+    {
+      "title": "Електронна пошта",
+      "url": "mailto:john.doe@example.com"
+    }
+  ]
+}

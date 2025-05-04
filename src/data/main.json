@@ -1,0 +1,10 @@
+{
+  "en": {
+    "name": "John Doe",
+    "position": "Fullstack Developer"
+  },
+  "ua": {
+    "name": "Джон Доу",
+    "position": "Фулстек Розробник"
+  }
+}

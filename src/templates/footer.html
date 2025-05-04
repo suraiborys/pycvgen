@@ -1,0 +1,10 @@
+{% block footer_content %}
+<footer>
+  <p>Copyleft 2025 - <span id="current-year"></span></p>
+</footer>
+{% endblock %}
+{% block footer_scripts %}
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+{% endblock %}

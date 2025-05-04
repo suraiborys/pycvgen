@@ -1,0 +1,263 @@
+:root {
+    /* Light theme (default) */
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --heading-color: #343a40;
+    --link-color: #0366d6;
+    --link-hover-color: #0056b3;
+    --border-color: #dee2e6;
+    --section-bg: #ffffff;
+    --btn-bg: #0366d6;
+    --btn-bg-hover: #0056b3;
+    --btn-text: #ffffff;
+    --switch-bg: #ccc;
+    --switch-slider: #fff;
+}
+
+[data-theme="dark"] {
+    /* Dark theme */
+    --bg-color: #1e1e1e;
+    --text-color: #d4d4d4;
+    --heading-color: #e1e1e1;
+    --link-color: #58a6ff;
+    --link-hover-color: #79c0ff;
+    --border-color: #424242;
+    --section-bg: #252526;
+    --btn-bg: #1a4a7b;
+    --btn-bg-hover: #2965a5;
+    --btn-text: #ffffff;
+    --switch-bg: #555;
+    --switch-slider: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    color: var(--heading-color);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+h3 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+li::before {
+    content: ">";
+    position: absolute;
+    left: -20px;
+    color: var(--link-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.switchers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-text);
+    text-decoration: none;
+}
+
+.download-pdf {
+    text-align: center;
+    margin: 30px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Theme Switch */
+.theme-switch-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.theme-toggle {
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    color: var(--link-color);
+}
+
+.theme-toggle:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Language Switch */
+.language-switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+.language-switch a {
+    padding: 5px;
+}
+
+.language-switch a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .theme-switch-container, .language-switch {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .theme-switch-container {
+        align-self: flex-end;
+    }
+
+    .language-switch {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+}

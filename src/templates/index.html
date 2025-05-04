@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title%}{{ main_items.name }} - {{ main_items.position }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% include 'header.html' %}
+
+  <section id="about">
+    <h3>{% trans %}About{% endtrans %}</h3>
+    <ul>
+      {% for item in about_items %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h3>{% trans %}Experience{% endtrans %}</h3>
+    {% for item in experience_items %}
+    <div class="experience-item">
+      <h4>{{ item.company }}</h4>
+      <p>{% trans %}Position{% endtrans %}: {{ item.title }}</p>
+      <p>{% trans %}Period{% endtrans %}: {{ item.years }}</p>
+      <p>{% trans %}Description{% endtrans %}: {{ item.description }}</p>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section id="education">
+    <h3>{% trans %}Education{% endtrans %}</h3>
+    <ul>
+      {% for item in education_items %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h3>{% trans %}Languages{% endtrans %}</h3>
+    <ul>
+      {% for item in language_items %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section id="links">
+    <h3>{% trans %}Links{% endtrans %}</h3>
+    <ul>
+      {% for item in social_links_items %}
+      <li><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <div class="download-pdf">
+    <a href="#" class="btn">{% trans %}Download as PDF{% endtrans %}</a>
+  </div>
+
+  {% include 'footer.html' %}
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% block header_content %}
+<header>
+  <div class="switchers">
+    <div class="theme-switch-container">
+      <a href="#" id="theme-toggle" class="theme-toggle">{% trans %}'Dark Mode'{% endtrans %}</a>
+    </div>
+    <div class="language-switch">
+      {% for language in languages %}
+      <a href="{{ language.url }}" class="{{ language.class }}">{{ language.title }}</a>{% if not loop.last %} | {%
+      endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <h1>{{ main_items.name }}</h1>
+  <h2>{{ main_items.position }}</h2>
+</header>
+{% endblock %}
+{% block header_scripts %}
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateThemeText();
+
+  function updateThemeText() {
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      themeToggle.textContent = "{% trans %}'Light Mode'{% endtrans %}";
+    } else {
+      themeToggle.textContent = "{% trans %}'Dark Mode'{% endtrans %}";
+    }
+  }
+
+  function toggleTheme(e) {
+    e.preventDefault();
+
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+    updateThemeText();
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
+</script>
+{% endblock %}

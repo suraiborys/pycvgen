@@ -1,0 +1,64 @@
+# English translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-04 19:26+0300\n"
+"PO-Revision-Date: 2025-05-04 18:57+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: src/templates/header.html:5 src/templates/header.html:29
+msgid "'Dark Mode'"
+msgstr "Dark Mode"
+
+#: src/templates/header.html:27
+msgid "'Light Mode'"
+msgstr "Light Mode"
+
+#: src/templates/index.html:10
+msgid "About"
+msgstr "About"
+
+#: src/templates/index.html:17
+msgid "Experience"
+msgstr "Experience"
+
+#: src/templates/index.html:21
+msgid "Position"
+msgstr "Position"
+
+#: src/templates/index.html:22
+msgid "Period"
+msgstr "Period"
+
+#: src/templates/index.html:23
+msgid "Description"
+msgstr "Description"
+
+#: src/templates/index.html:29
+msgid "Education"
+msgstr "Education"
+
+#: src/templates/index.html:36
+msgid "Languages"
+msgstr "Languages"
+
+#: src/templates/index.html:43
+msgid "Links"
+msgstr "Links"
+
+#: src/templates/index.html:52
+msgid "Download as PDF"
+msgstr "Download as PDF"
+

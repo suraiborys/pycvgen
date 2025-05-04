@@ -1,0 +1,42 @@
+{
+  "en": [
+    {
+      "title": "Software Engineer",
+      "company": "Google",
+      "years": "2020-Present",
+      "description": "Developed and maintained software for Google's search engine."
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Amazon",
+      "years": "2018-2020",
+      "description": "Developed and maintained data science models for Amazon's e-commerce platform."
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Microsoft",
+      "years": "2017-2018",
+      "description": "Developed and maintained software for Microsoft's cloud platform."
+    }
+  ],
+  "ua": [
+    {
+      "title": "Інженер програмного забезпечення",
+      "company": "Google",
+      "years": "2020-теперішній час",
+      "description": "Розробляв та підтримував програмне забезпечення для пошукової системи Google."
+    },
+    {
+      "title": "Науковець з даних",
+      "company": "Amazon",
+      "years": "2018-2020",
+      "description": "Розробляв та підтримував моделі для аналізу даних платформи електронної комерції Amazon."
+    },
+    {
+      "title": "Стажер інженер програмного забезпечення",
+      "company": "Microsoft",
+      "years": "2017-2018",
+      "description": "Розробляв та підтримував програмне забезпечення для хмарної платформи Microsoft."
+    }
+  ]
+}
