@@ -1,0 +1,16 @@
+version: '3'
+
+dotenv: ['.env']
+
+tasks:
+  build:
+    desc: "Build static site"
+    cmds:
+      - pybabel compile -d locale -l en
+      - pybabel compile -d locale -l uk
+      - $PYTHON_INTERPRETER_PATH main.py
+
+  deploy:
+    desc: "Deploy to server over SSH"
+    cmds:
+      - scp -i $SSH_KEY ./dist/* $SSH_USERNAME@$SERVER_IP:/var/www/html
